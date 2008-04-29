@@ -1,0 +1,109 @@
+<project name="seamit" default="build" basedir=".">
+
+  <property file="build.properties" />
+  <property name="project.jar" value="dist/${project.name}.jar"/>
+  <property name="main.source.dir" value="src/main/java"/>
+  <property name="test.source.dir" value="src/test/java"/>
+  <property name="main.resource.dir" value="src/main/resources"/>
+  <property name="test.resource.dir" value="src/test/resources"/>
+  <property name="main.class.dir" value="build/classes"/>
+  <property name="test.class.dir" value="build/test-classes"/>
+  <property name="javadoc.dir" value="dist/javadoc"/>
+
+  <path id="base.path">
+    <fileset dir="libs">
+      <include name="*.jar"/>
+      <include name="*.so"/>
+    </fileset>
+    <path location="${main.class.dir}" />
+  </path>
+	
+  <path id="test.path">
+	<path refid="base.path"/>
+    <path location="${test.class.dir}" />
+    <pathelement location="${junit}" />
+  </path>
+  
+  <target name="all" depends="clean,javadoc,build" />
+  <target name="build" depends="dist" />
+
+  <target name="clean">
+    <delete dir="build" />
+    <delete dir="${javadoc.dir}" />
+    <delete file="${project.jar}" />
+  </target>
+  
+  <target name="init">
+    <mkdir dir="${main.class.dir}" />
+    <mkdir dir="${test.class.dir}" />
+	<copy todir="${main.class.dir}">
+      <fileset dir="${main.resource.dir}"/>
+	</copy>
+	<copy todir="${test.class.dir}">
+      <fileset dir="${test.resource.dir}"/>
+	</copy>
+  </target>
+  
+  <target name="compile" depends="init">
+    <javac srcdir="${main.source.dir}" destdir="${main.class.dir}"
+           encoding="${encoding}" debug="off" deprecation="on">
+      <classpath refid="base.path" />
+    </javac>
+  </target>
+  
+  <target name="compile-tests" depends="compile">
+    <javac srcdir="${test.source.dir}"
+		   destdir="${test.class.dir}"
+           encoding="${encoding}"
+		   debug="on"
+		   deprecation="on">
+      <classpath refid="test.path" />
+    </javac>
+  </target>
+  
+  <target name="test" depends="compile-tests">
+    <junit>
+      <classpath refid="test.path" />
+      <formatter type="plain" usefile="false" />
+      <batchtest fork="yes">
+        <fileset dir="${test.source.dir}">
+          <include name="**/*Test.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+  <target name="jar" depends="test">
+    <jar jarfile="${project.jar}" basedir="${main.class.dir}"/>
+  </target>
+  
+  <target name="dist" depends="jar">
+<!--
+	<copy todir="${local.test.dir}">
+      <fileset dir="dist"/>
+	</copy>
+	-->
+  </target>
+
+  <target name="javadoc" >
+    <delete dir="${javadoc.dir}" />
+    <mkdir dir="${javadoc.dir}" />
+    <javadoc sourcepath="src/main/java"
+             destdir="${javadoc.dir}"
+			 encoding="${encoding}"
+			 />
+  </target>
+  
+  <target name="run" >
+    <java classname="${execute.class}" fork="true">
+      <classpath refid="base.path" />
+    </java>
+  </target>
+  
+  <target name="applet" >
+    <java classname="${applet.class}" fork="true">
+      <classpath refid="base.path" />
+    </java>
+  </target>
+  
+</project>
