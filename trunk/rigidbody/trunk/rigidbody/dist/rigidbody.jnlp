@@ -12,8 +12,8 @@
 	<j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+"/>
     <property name="sun.java2d.opengl" value="true"/>
     <property name="sun.java2d.noddraw" value="true"/>
-	<jar href="/trunk/rigidbody/trunk/rigidbody/libs/ochagl.jar" />
-	<jar href="/trunk/rigidbody/trunk/rigidbody/dist/rigidbody.jar" main="true"/>
+	<jar href="/svn/trunk/rigidbody/trunk/rigidbody/libs/ochagl.jar" />
+	<jar href="/svn/trunk/rigidbody/trunk/rigidbody/dist/rigidbody.jar" main="true"/>
 	<extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" />
   </resources>
   <application-desc main-class="rigidbody.SphereWindow"/>
