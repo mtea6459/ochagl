@@ -29,8 +29,6 @@
 
   <target name="clean">
     <delete dir="build" />
-    <delete dir="${javadoc.dir}" />
-    <delete file="${project.jar}" />
   </target>
   
   <target name="init">
