@@ -11,8 +11,9 @@
   <resources>
     <j2se href="http://java.sun.com/products/autodl/j2se" version="1.4+"/>
     <property name="sun.java2d.noddraw" value="true"/>
-    <jar href="jogl-demos.jar" main="true"/>
+	<jar href="../libs/ochagl.jar" />
+	<jar href="rigidbody.jar" main="true"/>
     <extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" />
   </resources>
-  <application-desc main-class="demos.particles.engine.ControlWindow"/>
+  <application-desc main-class="rigidbody.SphereWindow"/>
 </jnlp>
