@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp codebase="http://ochagl.googlecode.com/svn/trunk/rigidbody/trunk/dist/" href="rigidbody.jnlp">
+<jnlp codebase="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/"
+      href="ParticleEngine.jnlp">
   <information>
-    <title>OCHAGL Rigd Body Demo</title>
-    <vendor>ocha</vendor>
-    <homepage href="http://code.google.com/p/ochagl/"/>
-    <description>Rigid Body Demo</description>
-    <description kind="short">Rigid Body demonstration written in Java using OCHAGL.</description>
+    <title>JOGL Particle Engine Demo</title>
+    <vendor>Ben Chappell</vendor>
+    <homepage href="http://jogl-demos.dev.java.net/"/>
+    <description>Particle Engine Demo</description>
+    <description kind="short">Particle Engine demonstration written in Java using JOGL.</description>
     <offline-allowed/>
   </information>
-  <resources>
-	<j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
-    <property name="sun.java2d.opengl" value="true"/>
-    <!--property name="sun.java2d.noddraw" value="true"/>
-	<jar href="../libs/ochagl.jar" />
-	<jar href="rigidbody.jar" main="true"/>-->
-	<!--extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" /-->
-	<extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-1.1.1-rc8/webstart/jogl.jnlp" />
-  </resources>
-  <application-desc main-class="rigidbody.SphereWindow"/>
+
+    <resources>
+      <j2se href="http://java.sun.com/products/autodl/j2se" version="1.4+"/>
+      <property name="sun.java2d.noddraw" value="true"/>
+      <jar href="jogl-demos.jar" main="true"/>
+      <extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" />
+    </resources>
+
+  <application-desc main-class="demos.particles.engine.ControlWindow"/>
 </jnlp>
