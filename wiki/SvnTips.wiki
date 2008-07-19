@@ -1,0 +1,19 @@
+チェックアウト
+{{{
+svn co https://ochagl.googlecode.com/svn/ochagl/trunk/ --username ocha.awk
+}}}
+
+リリースタグの例
+{{{
+svn cp -m "Release 20080719" https://ochagl.googlecode.com/svn/ochagl/trunk https://ochagl.googlecode.com/svn/ochagl/tags/REL-20080719 --username ocha.awk
+}}}
+
+ブランチの例
+{{{
+svn cp -m "Shooting Game" https://ochagl.googlecode.com/svn/ochagl/trunk https://ochagl.googlecode.com/svn/ochagl/branches/TRY-ShooGame --username ocha.awk
+}}}
+
+ブランチチェックアウト
+{{{
+svn co https://ochagl.googlecode.com/svn/ochagl/branches/TRY-ShooGame ochashoo
+}}}
