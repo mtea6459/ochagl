@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp codebase="http://ochagl.googlecode.com/svn/rigidbody/trunk/dist/" href="rigidbody.jnlp">
+  <information>
+    <title>OCHAGL Rigd Body Demo</title>
+    <vendor>ocha</vendor>
+    <homepage href="http://code.google.com/p/ochagl/"/>
+    <description>Rigid Body Demo</description>
+    <description kind="short">Rigid Body demonstration written in Java using OCHAGL.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.4+"/>
+    <property name="sun.java2d.noddraw" value="true"/>
+    <jar href="../libs/ochagl.jar" />
+    <jar href="rigidbody.jar" main="true"/>
+    <extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" />
+  </resources>
+  <application-desc main-class="rigidbody.SphereWindow"/>
+</jnlp>
