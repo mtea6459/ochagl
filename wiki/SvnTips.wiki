@@ -3,6 +3,11 @@
 svn co https://ochagl.googlecode.com/svn/ochagl/trunk/ --username ocha.awk
 }}}
 
+コミット
+{{{
+svn ci -m "MIMEを設定" dist\rigidbody.jnlp --username ocha.awk
+}}}
+
 リリースタグの例
 {{{
 svn cp -m "Release 20080719" https://ochagl.googlecode.com/svn/ochagl/trunk https://ochagl.googlecode.com/svn/ochagl/tags/REL-20080719 --username ocha.awk
@@ -30,12 +35,21 @@ cd rigidbody
 svn propset svn:mime-type "application/x-java-jnlp-file" dist\rigidbody.jnlp
 }}}
 
-プロパティのリストを見る
+プロパティの一覧を見る
 {{{
 svn proplist dist/rigidbody.jnlp
 }}}
 
-コミット
+プロパティの中身を見る
 {{{
-svn ci -m "MIMEを設定" dist\rigidbody.jnlp --username ocha.awk
+svn propget prop-name file
 }}}
+
+ディレクトリを管理対象外とする
+{{{
+cd 対象ディレクトリの親ディレクトリ
+svn propedit prop-name .
+# エディタで対象ディレクトリを一行おきに記述する
+}}}
+
+
