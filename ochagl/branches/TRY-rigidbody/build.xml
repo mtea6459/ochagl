@@ -6,8 +6,9 @@
 	<property name="test.source.dir" value="src/test/java"/>
 	<property name="main.resource.dir" value="src/main/resources"/>
 	<property name="test.resource.dir" value="src/test/resources"/>
-	<property name="main.class.dir" value="build/classes"/>
-	<property name="test.class.dir" value="build/test-classes"/>
+	<property name="target.dir" value="target"/>
+	<property name="main.class.dir" value="${target.dir}/classes"/>
+	<property name="test.class.dir" value="${target.dir}/test-classes"/>
 	<property name="javadoc.dir" value="dist/javadoc"/>
 
 	<path id="base.path">
@@ -27,7 +28,7 @@
 	<target name="build" depends="jar" />
 
 	<target name="clean">
-		<delete dir="build" />
+		<delete dir="${target.dir}" />
 		<delete dir="${javadoc.dir}" />
 		<delete file="${project.jar}" />
 	</target>
