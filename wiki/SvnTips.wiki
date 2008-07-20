@@ -17,3 +17,25 @@ svn cp -m "Shooting Game" https://ochagl.googlecode.com/svn/ochagl/trunk https:/
 {{{
 svn co https://ochagl.googlecode.com/svn/ochagl/branches/TRY-ShooGame ochashoo
 }}}
+
+削除
+{{{
+svn rm -m "" https://ochagl.googlecode.com/svn/ochagl/tags/REL-20070807
+}}}
+
+svn cp -m "Release 20080720" https://ochagl.googlecode.com/svn/ochagl/branches/TRY-rigidbody https://ochagl.googlecode.com/svn/ochagl/tags/REL-20080720-TRY-rigidbody	
+
+
+MIMEタイプの設定方法
+※ローカルのファイルを指定する
+{{{
+cd rigidbody
+svn propset svn:mime-type "application/x-java-jnlp-file" dist\rigidbody.jnlp
+}}}
+
+プロパティのリストを見る
+{{{
+svn proplist dist/rigidbody.jnlp
+}}}
+コミット
+svn ci -m "MIMEを設定" dist\rigidbody.jnlp --username ocha.awk
