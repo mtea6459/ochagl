@@ -1,0 +1,49 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"/>
+</head>
+<body>
+
+<div style="float:left;margin:2emv;">
+<h3>剛体デモ</h3>
+<ul>
+<li>モード切り替え：V</li>
+<li>リセット：R</li>
+<li>通常モード</li>
+<ul>
+<li>移動：カーソルキー</li>
+<li>ジャンプ：スペース</li>
+<li>カメラ移動：W,A,S,D,Q,E</li>
+</ul>
+</ul>
+<ul>
+<li>デバッグモード</li>
+<ul>
+<li>カメラ平行移動：W,A,S,D,Q,E</li>
+<li>カメラ首ふり：左マウスドラッグ</li>
+<li>カメラズーム：左右マウスドラッグ</li>
+</ul>
+</ul>
+</div>
+
+<div>
+<applet code="org.jdesktop.applet.util.JNLPAppletLauncher"
+      width="800"
+      height="600"
+      archive="http://download.java.net/media/applet-launcher/applet-launcher.jar,
+               http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jar,
+               http://download.java.net/media/gluegen/webstart/gluegen-rt.jar,
+			   /downloads/ochagl/ochagl/ochagl.jar,
+               /downloads/ochagl/rigidbody/rigidbody.jar">
+   <param name="codebase_lookup" value="false">
+   <param name="subapplet.classname" value="rigidbody.SphereApplet">
+   <param name="subapplet.displayname" value="shoot test">
+   <!--param name="subapplet.image" VALUE="http://... .jpg"--> <!-- now loading image -->
+   <param name="noddraw.check" value="true">
+   <param name="progressbar" value="true">
+   <param name="jnlpNumExtensions" value="1">
+   <param name="jnlpExtension1" value="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp">
+</applet>
+</div>
+</body>
+</html> 
