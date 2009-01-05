@@ -1,4 +1,6 @@
 #sidebar TableOfContents
+<wiki:toc max_depth="1" />
+
 チェックアウト
 {{{
 svn co https://ochagl.googlecode.com/svn/ochagl/trunk/ --username ocha.awk
