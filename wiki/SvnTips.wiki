@@ -1,6 +1,6 @@
 #summary これはサマリだよ
 #labels ほげ
-#sidebar TableOfContents
+#sidebar HOWTO
 
 
 
