@@ -1,8 +1,13 @@
 #summary これはサマリだよ
 #labels ほげ
 #sidebar HOWTO
-
-
+<wiki:toc max_depth="6" />
+= Heading =
+== Subheading ==
+=== Level 3 ===
+==== Level 4 ====
+===== Level 5 =====
+====== Level 6 ======
 
 || *Year* || *Temperature (low)* || *Temperature (high)* ||
 || 1900 || -10 || 25 ||
@@ -11,7 +16,6 @@
 || 1930 || _N/A_ || _N/A_ ||
 || 1940 || -2 || 40 ||
 
-<h1>テスト</h1>
 チェックアウト
 {{{
 svn co https://ochagl.googlecode.com/svn/ochagl/trunk/ --username ocha.awk
