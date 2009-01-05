@@ -1,7 +1,6 @@
+<wiki:toc max_depth="1" />
 #summary これはサマリだよ
 #sidebar TableOfContents
-
- <wiki:toc max_depth="1" />
 
 * [Articles HOWTO articles]
     * [ArticlesXSS Web security]
